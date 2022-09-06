@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Html, Css, Javascript...">
+    <meta name="description" content="Sidbeskrivning...">
+    <title>Contact Us</title>
+    <style>
+        .right{text-align: right;}
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Contact Us</h1>
+        <form name="f1" onsubmit="">
+            <table>
+                <tr>
+                    <td>First name:</td>
+                    <td><input type="text" size="20px" name="fname"></td>
+                </tr>
+                <tr>
+                    <td>Second name:</td>
+                    <td><input type="text" size="20px" name="lname"></td>
+                </tr>
+                <tr><td>&blank;</td></tr>
+                <tr>
+                    <td colspan="2" class="right"><button onclick="document.f1.submit()">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </main>
+</body>
+
+</html>
