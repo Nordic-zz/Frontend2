@@ -1,0 +1,9 @@
+@import "../default.css";
+
+@media (min-width: 780px){
+    .flex {
+        display: flex;
+    }
+}
+
+
