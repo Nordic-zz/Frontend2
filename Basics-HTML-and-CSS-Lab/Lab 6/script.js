@@ -1,72 +1,63 @@
-
+// Init
 const btnClick = document.getElementById('btn1');
 btnClick.addEventListener('click', nextTask);
 let task = 0;
-let arr = [];
-init();
+const output = document.getElementById("output");
 
-function init(){
-    task = 0;
-    arr = ["Putte", "Kalle", "Nisse", "Pelle", "Micke"]
-}
+// Functions
+const hello = () => {console.log("Hello World!");}
+const greet = (namn) => {console.log("Hej " + namn + ", hur mår du?");}
+const calc = (tal1, tal2) => {return tal1 * tal2}
+const tip = (notan, dricks) => {return notan * (dricks/100 + 1)}
 
+// Show result
 function nextTask(){
     switch (++task){
      case 1:
-        document.getElementById("output").innerHTML = ("Del " + task + " - Skapa en Array med fem namn:" + "<br><br>");
-        document.getElementById("output").innerHTML += (arr + "<br><br>");
+        hello();
+        output.innerHTML = ("Hello World!" + "<br><br>");
         break;
 
     case 2:
-        document.getElementById("output").innerHTML = ("Del " + task + " - Ta bort \"Micke\" ur arrayen:" + "<br><br>");
-        arr.pop();
-        document.getElementById("output").innerHTML += (arr + "<br><br>");
+        let namn = prompt("Vad heter du?");
+        greet(namn);
+        output.innerHTML = ("Hej " + namn + ", hur mår du?" + "<br><br>");
         break;
         
     case 3:
-        document.getElementById("output").innerHTML = ("Del " + task + " - Ändra \"Kalle\" till \"Micke\":" + "<br><br>");
-        arr[1]="Micke";
-        document.getElementById("output").innerHTML += (arr + "<br><br>");
+        let tal1 = prompt("Ange två tal" + "\n" + "Tal1");
+        let tal2 = prompt("Tal 2");
+
+        output.innerHTML = (tal1 + " * " + tal2 + " = " + calc(tal1, tal2) + "<br><br>");
         break;
         
     case 4:
-        document.getElementById("output").innerHTML = ("Del " + task + " - Addera \"Jocke\":" + "<br><br>");
-        arr.push("Jocke");
-        document.getElementById("output").innerHTML += (arr + "<br><br>");
-        break;
+        let notan = prompt("Lägg till dricks på notan, vad slutade kalaset på?");
+        let dricks = prompt("Hur många procent vill du ge i dricks?");
+        //since you can't convert a String to localeString(!) we need to convert the string to number first
+        notan = +notan;
         
-    case 5:
-        document.getElementById("output").innerHTML = ("Del " + task + " - Sortera Arrayen i bokstavsordning:" + "<br><br>");
-        arr.sort();
-        document.getElementById("output").innerHTML += (arr + "<br><br>");
-        break;
-        
-    case 6:
-        document.getElementById("output").innerHTML = ("Del " + task + " - Vilken plats har \"Jocke\"?:" + "<br><br>");
-        
-        let ixJocke = arr.findIndex(hittaJocke);
-
-        function hittaJocke(value) {
-          return value === "Jocke";
-        }
-
-        document.getElementById("output").innerHTML += ("\"Jocke\" har plats " + ixJocke + "<br><br>");
-        document.getElementById("output").innerHTML += (arr + "<br><br>");
-        break;
-    
-    case 7:
-        document.getElementById("output").innerHTML = ("Del " + task + " - Vi säger tack och hej till \"Jocke\":" + "<br><br>");
-        arr.shift();
-        document.getElementById("output").innerHTML += (arr + "<br><br>");
-        break;
-
-    case 8:
-        document.getElementById("output").innerHTML = ("Del " + task + " - Skriv alla element i Consolen:" + "<br><br>");
-        arr.forEach(namn => {            
-            document.getElementById("output").innerHTML += (namn + "<br>");
-            console.log(namn);
-        });
-        init();
+        output.innerHTML = (
+            "<pre>" 
+            + "Restaurant IN I DIMMAN"
+            + "<br>"
+            + "======================"
+            + "<br><br>"
+            + "Nota" + "\t" + notan.toLocaleString("sv-SE", {style: "currency", currency: "SEK"})
+            + "<br>"
+            + "Dricks" + "\t" + dricks + "%"
+            + "<br>"
+            + "______________________"
+            + "<br>"
+            + "Totalt" + "\t" + tip(notan, dricks).toLocaleString("sv-SE", {style: "currency", currency: "SEK"}) 
+            + "<br>"
+            
+            + "______________________"
+            + "</pre>"
+        );
+        task = 0;
         break;
     }
 }
+
+
