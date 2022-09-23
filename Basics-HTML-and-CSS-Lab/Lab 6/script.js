@@ -58,6 +58,4 @@ function nextTask(){
         task = 0;
         break;
     }
-}
-
-
+};
