@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Navbar">
+    <meta name="author" content="Christer Sjöholm">
+    <title>DOM Manipulation</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        #output {
+            font-size: 15px;
+            font-weight: bolder;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            width: 50%;
+        }
+
+        #f1 {
+            font-size: 15px;
+            font-weight: bolder;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+
+  </head>
+  <body>
+    <main>
+    <h1>Lab 7</h1>
+    <h4>DOM Manipulation</h4>
+    <br>
+    <h5>Uppgift 1 - Uppdatera text</h5>
+    <p id="task1">Denna paragraf är gammal och måste uppdateras</p>
+    <h5>Uppgift 2 - Uppdatera länk</h5>
+    <p><a id="task2" href="https://example.com">Länk till example.com</a></p>
+    <div><a class="btn btn-primary btn-sm" href="#" role="button" id="btn1">Nästa uppgift</a></div>
+    <br>
+    <h5>Uppgift 3 - Beräkna volymen av en kub</h5>
+    <form id="f1" onsubmit="calcCube();">
+      <div class="container">
+        <div class="row">
+          <label for="bredd" class="col-2">Bredd i dm</label>
+          <input id="bredd" class="col-2" type="text" />
+        </div>
+        <br>
+        <div class="row">
+          <label for="hojd" class="col-2">Höjd i dm</label>
+          <input id="hojd" class="col-2" type="text" />
+        </div>
+        <br>
+        <div class="row">
+          <label for="djup" class="col-2">Djup i dm</label>
+          <input id="djup" class="col-2" type="text" />
+        </div>
+      </div>
+      <br>
+      <input type="submit" value="Beräkna kub" />
+    </form>
+    <br>
+    <div id="output"></div>
+    <br>
+</main>    
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="script.js"></script>
+   
+</body>
+</html>
