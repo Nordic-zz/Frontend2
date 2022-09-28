@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Navbar">
+    <meta name="author" content="Christer Sjöholm">
+    <title>Form Validation</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        
+        #f1 {
+            font-size: 15px;
+            font-weight: bolder;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            width: 50%;
+        }
+
+        input, textarea, select {
+          width: 100%;
+        }
+
+        .button, #check {
+          width: auto;
+          background-color: yellow;
+        }
+
+    </style>
+
+  </head>
+  <body onload="init()">
+    <main>
+    <h1>Lab 8</h1>
+    <h4>Form Validation</h4>
+    <br>
+    <form id="f1" onsubmit="return setButton();">
+      <label for="txt">Vad gäller ditt ärende?</label><br>
+      <textarea id="txt" name="txt" required></textarea>
+      <br><br>
+      <label for="mail">Mail-adress</label><br>
+      <input id="mail" name="mail" type="email" required>
+      <br><br>
+      <label for="band">Välj ett bra band</label><br>
+      <select id="band" name="band" type="select" onchange="return evalForm();" required>
+        <option>Välj i listan...</option>
+        <option>ABBA</option>
+        <option>BlackPink</option>
+        <option>U2</option>        
+        <option>Iron Maiden</option>
+      </select>
+      <span id="felBand"></span>
+      <br><br>
+      <input id="check" name="check" type="checkbox" value="Ja" required>
+      <label for="check">Jag har läst igenom de <a href="">fullständiga villkoren</a></label>
+      <br><br>
+      <input id="btn1" type="submit" class="button" value="Kontrollera formulär">
+    </form>
+</main>    
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="script.js"></script>
+   
+</body>
+</html>
