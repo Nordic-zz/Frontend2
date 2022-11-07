@@ -2,9 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Backend app",
-  "main": "service1.js",
+  "main": "Lab 15/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon Lab 15/index.js"
   },
   "author": "Christer Sjöholm",
   "license": "ISC",

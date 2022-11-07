@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.todos {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#f1 {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.todo {
+    padding: 10px;
+}
+.btn {
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: azure;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+}
