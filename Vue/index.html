@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        button {
+            margin: 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            border: 1px  solid  rgb(121, 71, 71);
+            font-weight: bold;
+        }
+
+        * {
+            margin: 10px
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Vue example</h1>
+    <div id="app">
+        <div v-for="book in filteredBooks">
+            <p>Book title: {{ book.title }}</p>
+            <p>Author: {{ book.author }}</p>
+            <br>
+        </div>
+        <hr>
+        <div v-for="book in books">
+            <div v-show="book.showBook">
+                <p>Book title: {{ book.title }}</p>
+                <p>Author: {{ book.author }}</p>
+            </div>
+            <div>
+                <button @click="toggleBook(book)">
+                    <span v-if="!book.showBook">Show Book</span>
+                    <span v-else>Hide Book</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
