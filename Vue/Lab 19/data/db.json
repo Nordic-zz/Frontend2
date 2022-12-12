@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "title": "Christer 1",
+      "body": "Christers första bloginlägg",
+      "imgUrl": "https://i1.wp.com/tolustar.com/wp-content/uploads/2020/02/Front-end-Development.jpeg?w=750&ssl=1",
+      "categories": [
+        "ChristerBlog"
+      ],
+      "author": "Christer",
+      "id": "vYdYz-l"
+    },
+    {
+      "title": "Christer 2",
+      "body": "Christer andra blogg inlägg\nHär är lite mer text",
+      "imgUrl": "https://i1.wp.com/tolustar.com/wp-content/uploads/2020/02/Front-end-Development.jpeg?w=750&ssl=1",
+      "categories": [
+        "ChristerBlog"
+      ],
+      "author": "Christer",
+      "id": "KEWDjLm"
+    }
+  ]
+}
