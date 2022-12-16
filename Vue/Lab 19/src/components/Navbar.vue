@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar container">
     <RouterLink to="/" class="navbar-brand">Christers Blog</RouterLink>
-    <form>
-      <input type="search" class="form-control" placeholder="Search">
+    <form @submit.prevent="handleSubmit" >
+      <input type="search" class="form-control" placeholder="Search" v-model="searchQuery" >
       <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
     <ul class="nav-links">
@@ -13,6 +13,15 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+  const router = useRouter()
+  const searchQuery = ref('')
+
+  const handleSubmit = () => {
+    router.push({ name: 'home', query: { searchQuery: searchQuery.value }})
+  }
 
 </script>
 
