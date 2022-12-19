@@ -58,15 +58,7 @@
     
     errors.value.title = !post.value.title ? true : false
     errors.value.body = !post.value.body ? true : false
-    errors.value.imgUrl = !post.value.imgUrl ? true : false
     errors.value.author = !post.value.author ? true : false
-    // if(!post.value.categories.length || !post.value.categories[0]) {
-    if(!post.value.categories.length || post.value.categories.findIndex(t => t=='') !== -1) {
-      errors.value.categories = true
-    } else {
-      errors.value.categories = false
-    }
-
 
     // if(errors.value.title || errors.value.body || errors.value.imgUrl || errors.value.categories || errors.value.author) {
     //   console.log('fel i formuläret')
@@ -85,13 +77,6 @@
 
   }
 
-  const addCategory = () => {
-    post.value.categories.push('')
-  }
-
-  const removeCategory = (i) => {
-    post.value.categories.splice(i, 1)
-  }
 
 </script>
 
