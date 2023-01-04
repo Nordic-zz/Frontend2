@@ -11,7 +11,12 @@ const Header = ({ title }) => {
         </div>
         <div className='mt-4'>
             { loggedIn && <p className='Header'>Christer S</p>}
-            { !loggedIn && <button className='clear-btn' onClick={() => setLoggedIn(true)}>Log In</button>}            
+            { !loggedIn && 
+            <div className="mb-4">
+                <div className='Header'>
+                    <button className='clear-btn' onClick={() => setLoggedIn(true)}>Log In</button>
+                </div>
+            </div>}         
         </div>
     </div>
     )

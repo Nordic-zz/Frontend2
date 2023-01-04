@@ -41,6 +41,10 @@
   justify-content: space-between;
   border-bottom: 1px solid #cfcfcf;
   padding-block: .2rem;
+  padding: 20px;
+}
+.clicked {
+  background-color: #6acd35;
 }
 .product-title {
   flex: 3;
